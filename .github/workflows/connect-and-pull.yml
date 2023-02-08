@@ -1,0 +1,15 @@
+on:
+  push:
+    branches: [main]
+jobs:
+  pull:
+    # The type of runner that the job will run on
+    runs-on: self-hosted
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Runs a single command using the runners shell
+    - name: Pull Code
+      run: |
+        cd ~/Gestdoc-wordpress &&
+        git pull origin main
